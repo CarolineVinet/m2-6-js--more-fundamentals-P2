@@ -1,6 +1,5 @@
 // Exercise 3
 // ----------
-
 let mostPopularFood = [
   "bean burritos",
   "poke bowl",
@@ -13,13 +12,10 @@ let mostPopularFood = [
   "parmesan chicken",
   "buffalo-flavored cauliflower",
 ];
-
 const sortList = (arr) => {
-  console.log(arr);
-  let copiedArray = [...arr];
-  let alphOrder = copiedArray.sort();
-  for (let i = 0; i < alphOrder.length; i++) {
-    console.log(`${alphOrder[i]} (${arr.indexOf(alphOrder[i]) + 1})`);
-  }
+  let alphOrder = [...arr].sort();
+  alphOrder.map((currentItem, index) => {
+    console.log(`${currentItem} (${arr.indexOf(currentItem) + 1})`);
+  });
 };
 sortList(mostPopularFood);
