@@ -6,7 +6,9 @@ const earlyBirds = ["Ellen", "Jerry", "Jasmine"];
 
 const printGuestOrder = (early, late) => {
   let newArr = early.concat(late);
-  console.log(newArr);
+  for (i = 0; i < newArr.length; i++) {
+    console.log(`${i + 1}. ${newArr[i]}`);
+  }
 };
 
 printGuestOrder(earlyBirds, lateComers);
